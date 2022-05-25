@@ -10,5 +10,6 @@ using TMPro;
 	{
 		public string Name;
 		public Sprite imgItem;
-		public int quantity;
-}
+		public int quantity; // khong nen luu vao vi ScriptableObject de luu cac gia tri khong doi
+		
+	}
