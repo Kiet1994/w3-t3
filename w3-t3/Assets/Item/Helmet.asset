@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02fe4a940a1c0c040a18827b9fe8e1ed, type: 3}
-  m_Name: Nope
+  m_Script: {fileID: 11500000, guid: ca51ec99d24217a4a9b04bfd20214d62, type: 3}
+  m_Name: Helmet
   m_EditorClassIdentifier: 
-  Name: 0
-  imgItem: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  quantity: 0
+  ItemName: Helmet
+  Icon: {fileID: 21300000, guid: fa1534fcea2a752429f831550d02ae49, type: 3}
