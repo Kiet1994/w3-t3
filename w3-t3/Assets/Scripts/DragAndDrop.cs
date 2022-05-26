@@ -54,7 +54,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        canvasGroup.alpha = .6f;
+        canvasGroup.alpha = 1f;
     }
 
 }
