@@ -9,7 +9,6 @@ public class ItemDisplay : MonoBehaviour
     public Image image;
     public TMP_Text quantity;
 
-    // Start is called before the first frame update
     private void OnValidate()
     {
         if (image == null)
