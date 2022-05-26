@@ -1,24 +1,31 @@
-using TMPro;
+
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 
 public class ItemDisplay : MonoBehaviour
 {
- 
-    public ItemData dataItem;
-    public TMP_Text quantityItem;
-    public Image imgItem;
+    public Item item;
+    public Image image;
+    public TMP_Text quantity;
 
-    void Start()
+    private void OnValidate()
     {
-        
-        quantityItem.text = dataItem.quantity.ToString();
-        if(quantityItem.text == "0")
-            {
-            quantityItem.text = null;
-            }
-        imgItem.sprite = dataItem.imgItem;
-    }
+        if (image == null)
+        {
+            image = GetComponent<Image>(); //gan' component
 
+        }
+        if (item == null)
+        {
+            image.enabled = false;
+            quantity.text = null;
+        }
+        else
+        {
+            image.sprite = item.Icon;
+            image.enabled = true;
+            quantity.text = item.Quantity.ToString();
+        }
+    }
 }

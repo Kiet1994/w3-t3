@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory1 : MonoBehaviour
 {
     [SerializeField] List<Item> items; //Tao. danh sach' cac' Item// cacs script Item sex dcj keo' vaof day sau do truyen hinhf anhr xuoongs UI ItemSLot thoong qua RefreshUI()
     [SerializeField] Transform itemsParent; // Vi. tri' UIObject chuas cacs Item Slot
@@ -28,5 +28,27 @@ public class Inventory : MonoBehaviour
         {
             itemSlots[i].Item = null; //neu hok co Item thi rong => script ItemSlot hok cap nhat hinh anh (dong 19)
         }
+    }
+
+    public bool AddItem(Item item) //loo~i ma' van~ code??? vi biet cau truc code tiep se hok bi loi
+    {
+        if (IsFull())
+            return false;
+        items.Add(item); //theem gia' tri. vao' cuoi' mang? items de lam gi?
+        RefreshUI();
+        return true;
+    }
+    public bool IsFull() //tra? ve' gia' tri. dua theo trong()
+    {
+        return items.Count >= itemSlots.Length;
+    }
+    public bool RemoveItem(Item item)
+    {
+        if (items.Remove(item))
+        {
+            RefreshUI();
+        }
+        return false;
+
     }
 }

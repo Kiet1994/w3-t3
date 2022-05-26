@@ -9,9 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a626c59cdd24d54e90f42785d0324ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 163decc865602c6449f51f40b410d4c4, type: 3}
   m_Name: Helmet
   m_EditorClassIdentifier: 
   ItemName: Helmet
   Icon: {fileID: 21300000, guid: 87630f81fe8754d49bab3fa66b0481cd, type: 3}
-  Quantity: 1
+  StrengthBonus: 0
+  AgilityBonus: 0
+  IntelligenceBonus: 0
+  VitalityBonus: 0
+  StrengthPercentBonus: 0
+  AgilityPercentBonus: 0
+  IntelligencePercentBonus: 0
+  VitalityPercentBonus: 0
+  EquipmentType: 0
