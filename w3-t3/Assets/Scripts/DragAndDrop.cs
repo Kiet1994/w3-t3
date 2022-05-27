@@ -16,7 +16,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         inventory = FindObjectOfType<Inventory>();
         temp = GameObject.FindGameObjectWithTag("TempSlot").transform;
     }
-    public void OnBeginDrag(PointerEventData eventData)
+    public void OnBeginDrag(PointerEventData eventData) // khi click chuyen UI image, quanity Toi Temp 
     {
         dragItemParent = eventData.pointerDrag.transform.parent;
 
@@ -24,12 +24,12 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     }
 
-    public void OnDrag(PointerEventData eventData)
+    public void OnDrag(PointerEventData eventData) //v? trí c?a UI Item1 = vi tri chuot
     {
         transform.position = Input.mousePosition;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    public void OnEndDrag(PointerEventData eventData) //
     {
         canvasGroup.alpha = 1f;
 

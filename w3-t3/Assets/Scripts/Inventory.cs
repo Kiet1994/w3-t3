@@ -3,21 +3,23 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    [SerializeField] Transform dropHandlerParent;
     public DropHandler[] slots;
 
     private void OnValidate()
     {
-        if (slots == null)
-        {
-            slots = GetComponentsInChildren<DropHandler>();
-        }
+    
     }
     private void Update()
     {
-        QuantityDisplay();
+        //QuantityDisplay();
+        if (dropHandlerParent != null)
+        {
+            slots = dropHandlerParent.GetComponentsInChildren<DropHandler>();
+        }
     }
 
-    public Transform GetClosestSlot()
+    public Transform GetClosestSlot() //gan nhat
     {
         for (int i = 0; i < slots.Length; i++)
         {
@@ -29,22 +31,22 @@ public class Inventory : MonoBehaviour
         return null;
     }
 
-    public void QuantityDisplay()
-    {
-        for (int i = 0; i < 6; i++)
-        {
-            if (slots[i].transform.childCount != 0)
-            {
-                slots[i].transform.GetChild(0).GetComponentInChildren<Text>().enabled = false;
-            }
-        }
+   // public void QuantityDisplay()
+   // {
+       // for (int i = 0; i < 6; i++)
+       // {
+         //   if (slots[i].transform.childCount != 0)
+         //   {
+       //        slots[i].transform.GetChild(0).GetComponentInChildren<Text>().enabled = false;
+          //  }
+      //  }
 
-        for (int i = 0; i < slots.Length; i++)
-        {
-            if (slots[i].transform.childCount != 0)
-            {
-                slots[i].transform.GetChild(0).GetComponentInChildren<Text>().enabled = true;
-            }
-        }
-    }
+     //   for (int i = 0; i < slots.Length; i++)
+      //  {
+          //  if (slots[i].transform.childCount != 0)
+          //  {
+           //    /slots[i].transform.GetChild(0).GetComponentInChildren<Text>().enabled = true;
+          //  }
+      //  }
+  //  }
 }
